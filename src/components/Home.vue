@@ -195,24 +195,106 @@
       </div>
     </div>
     <!-- Contact Form -->
-    <div class="contact-form full-height col-lg-6">
-      <h1>Make Your Business Shine</h1>
-      <h1>WITH NBS IN YOUR CORNER, THE POSSIBILITIES ARE ENDLESS</h1>
-      <p>
-        Connect with us and explore what NAGASE Business Services can do for
-        your project. Whether you have a material that’s ready to scale and need
-        a better understanding of its market and applications or you want to
-        commercialize it but are unsure about regulatory requirements, NBS can
-        empower your organization with flexible solutions tailored to your
-        specific needs.
-      </p>
-      <p>
-        Please fill out the contact form and one of our experts will reach out
-        to you soon.
-      </p>
+    <div class="contact-form full-height container-fluid">
+      <div class="row">
+        <div class="col-sm-12 col-md-6">
+          <h1>Make Your Business Shine</h1>
+          <h1>WITH NBS IN YOUR CORNER, THE POSSIBILITIES ARE ENDLESS</h1>
+          <p>
+            Connect with us and explore what NAGASE Business Services can do for
+            your project. Whether you have a material that’s ready to scale and
+            need a better understanding of its market and applications or you
+            want to commercialize it but are unsure about regulatory
+            requirements, NBS can empower your organization with flexible
+            solutions tailored to your specific needs.
+          </p>
+          <p>
+            Please fill out the contact form and one of our experts will reach
+            out to you soon.
+          </p>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <form>
+            <div class="form-row">
+              
+                <div class="col-lg-6">
+                  <input
+                  type="text"
+                  class="form-control col-lg-6"
+                  id="inputName"
+                  placeholder="Name*"
+                />
+                </div>
+                <div class="col-md-6">
+                  <input
+                  type="text"
+                  class="form-control col-md-6"
+                  id="inputCountry"
+                  placeholder="Country*"
+                />
+                </div>
+              
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="inputCompany"
+                placeholder="Company"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control"
+                id="inputEmail"
+                placeholder="Email Address"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="inputJob"
+                placeholder="Job Title"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="text"
+                class="form-control"
+                id="inputContact"
+                placeholder="Contact Number*"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">CLICK AND SUBMIT</button>
+          </form>
+          <h3>*Requiered Fields</h3>
+        </div>
+      </div>
     </div>
     <!-- Footer -->
-    <div class="footer full-height col-lg-12"></div>
+    <div class="footer full-height container-fluid">
+      <div class="row">
+        <div class="col-sm-6 col-md-4">
+          <h2>NAGASE BUSINESS SERVICES</h2>
+          <p>©2022 Nagase Business Services</p>
+          <p>All Rights Reserved</p>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <p>450 E. Devon Avenue Suite 300</p>
+          <p>Itasca, IL 60143</p>
+          <p>nbs@nagase-nam.com</p>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <ul>
+            <li><a href="">PRIVACY</a></li>
+            <li><a href="">COOKIE POLICY</a></li>
+            <li><a href="#top">BACK TO TOP</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
