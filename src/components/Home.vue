@@ -5,15 +5,15 @@
     </div>
     <!-- Landing -->
     <div class="row">
-      <div class="landing full-height col-12 p-2">
-        <div class="col-lg-6 col-sm-12 d-inline-block">
-          <h1>Acceleration Through Collaboration</h1>
+      <div class="landing full-height">
+        <div class="col-lg-6 col-sm-12 d-inline-block title">
+          <h1 class="title">Acceleration Through Collaboration</h1>
         </div>
         <div class="col-lg-6 col-sm-12 d-inline-block">
-          <h2>
+          <h2 class="subtitle text-left">
             EMPOWER YOUR PEOPLE AND PROJECTS WITH NAGASE BUSINESS SERVICES
           </h2>
-          <p>
+          <p class="text-epi">
             Leveraging years of experience in international Specialty Chemicals
             sales and marketing combined with a global network of over 100
             Nagase Group® companies, NAGASE Business Services brings light to
@@ -23,15 +23,16 @@
             incubator, toll producer or marketer. We want to become your
             collaborator.
           </p>
+          <div type="button" class="btn btn-primary click">CLICK TO LEARN MORE</div>
         </div>
-        <div type="button" class="btn btn-primary">Click To Learn</div>
+        
       </div>
     </div>
 
     <!-- Cards -->
     <div class="cards full-height container-fluid">
       <div class="cards-title">
-        <h1>
+        <h1 class="subtitle">
           NAGASE BUSINESS SERVICES OFFERS A SPECTRUM OF A-LA-CARTE OR 360
           SERVICES TO BRING YOUR PROJECTS TO THEIR FULL POTENTIAL
         </h1>
@@ -197,10 +198,10 @@
     <!-- Contact Form -->
     <div class="contact-form full-height container-fluid">
       <div class="row">
+        <h1 class="title">Make Your Business Shine</h1>
         <div class="col-sm-12 col-md-6">
-          <h1>Make Your Business Shine</h1>
-          <h1>WITH NBS IN YOUR CORNER, THE POSSIBILITIES ARE ENDLESS</h1>
-          <p>
+          <h1 class="subtitle2">WITH NBS IN YOUR CORNER, THE POSSIBILITIES ARE ENDLESS</h1>
+          <p class="text-epi">
             Connect with us and explore what NAGASE Business Services can do for
             your project. Whether you have a material that’s ready to scale and
             need a better understanding of its market and applications or you
@@ -208,7 +209,7 @@
             requirements, NBS can empower your organization with flexible
             solutions tailored to your specific needs.
           </p>
-          <p>
+          <p class="text-epi">
             Please fill out the contact form and one of our experts will reach
             out to you soon.
           </p>
@@ -216,60 +217,63 @@
         <div class="col-sm-12 col-md-6">
           <form>
             <div class="form-row">
-              
-                <div class="col-lg-6">
+                <div class="col-md-6 col-sm-12 d-inline-block">
                   <input
                   type="text"
-                  class="form-control col-lg-6"
+                  class="form-control"
                   id="inputName"
                   placeholder="Name*"
                 />
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-12 d-inline-block">
                   <input
                   type="text"
-                  class="form-control col-md-6"
+                  class="form-control"
                   id="inputCountry"
                   placeholder="Country*"
                 />
                 </div>
               
             </div>
-            <div class="form-group">
-              <input
+            <div class="form-row">
+              <div class="col-md-6 col-sm-12 d-inline-block">
+                <input
                 type="text"
                 class="form-control"
                 id="inputCompany"
                 placeholder="Company"
               />
-            </div>
-            <div class="form-group">
-              <input
+              </div>
+              <div class="col-md-6 col-sm-12 d-inline-block">
+                <input
                 type="email"
                 class="form-control"
                 id="inputEmail"
                 placeholder="Email Address"
               />
+              </div>
             </div>
-            <div class="form-group">
-              <input
+            <div class="form-row">
+              <div class="col-md-6 col-sm-12 d-inline-block">
+                <input
                 type="text"
                 class="form-control"
                 id="inputJob"
                 placeholder="Job Title"
               />
-            </div>
-            <div class="form-group">
-              <input
+              </div>
+              <div class="col-md-6 col-sm-12 d-inline-block">
+                <input
                 type="text"
                 class="form-control"
                 id="inputContact"
                 placeholder="Contact Number*"
               />
+              </div>
             </div>
-            <button type="submit" class="btn btn-primary">CLICK AND SUBMIT</button>
+            <button type="submit" class="btn btn-primary click-submit">CLICK AND SUBMIT</button>
           </form>
-          <h3>*Requiered Fields</h3>
+          <h3 class="note">*Requiered Fields</h3>
         </div>
       </div>
     </div>
@@ -277,20 +281,21 @@
     <div class="footer full-height container-fluid">
       <div class="row">
         <div class="col-sm-6 col-md-4">
-          <h2>NAGASE BUSINESS SERVICES</h2>
-          <p>©2022 Nagase Business Services</p>
-          <p>All Rights Reserved</p>
+          <h2 class="footer-title">NAGASE BUSINESS SERVICES</h2>
+          <p class="footer-subtitle">©2022 Nagase Business Services</p>
+          <p class="footer-subtitle">All Rights Reserved</p>
         </div>
         <div class="col-sm-6 col-md-4">
-          <p>450 E. Devon Avenue Suite 300</p>
-          <p>Itasca, IL 60143</p>
-          <p>nbs@nagase-nam.com</p>
+          <p class="text-epi">450 E. Devon Avenue Suite 300</p>
+          <p class="text-epi">Itasca, IL 60143</p>
+          <p class="text-epi">nbs@nagase-nam.com</p>
         </div>
         <div class="col-sm-12 col-md-4">
           <ul>
-            <li><a href="">PRIVACY</a></li>
-            <li><a href="">COOKIE POLICY</a></li>
-            <li><a href="#top">BACK TO TOP</a></li>
+            <li><a href="" class="footer-link">PRIVACY</a></li>
+            <li><a href="" class="footer-link">COOKIE POLICY</a></li>
+            <li><a href="#top" class="footer-link">BACK TO TOP </a></li>
+            <fa icon="fa-duotone fa-angles-up" />
           </ul>
         </div>
       </div>
@@ -309,6 +314,85 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+.title {
+  font-family:'Epicene Text Bold';
+  font-size: 120px;
+  text-align: left;
+  color: #FFFFFF;
+  padding-left: 20px;
+}
+
+.subtitle {
+  font-family:'Calibre Bold';
+  font-size: 40px;
+  color: #A1A9D6;
+}
+
+.subtitle2 {
+  font-family:'Calibre Bold';
+  font-size: 40px;
+  color: #EBB3A3;
+  text-align: left;
+}
+
+.text-epi {
+  font-family:'Epicene Text';
+  font-size: 20px;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.click {
+  color: #1A1818 !important;
+  background-color: #C7CDEB !important;
+  border-radius: 0px !important;
+  font-family: "Calibre Bold";
+  font-size: 22px;
+  float: left;
+  border: 0px !important;
+}
+
+.click-submit {
+  color: #1A1818 !important;
+  background-color: #F2D0C7 !important;
+  border-radius: 0px !important;
+  font-family: "Calibre Bold";
+  font-size: 22px;
+  float: left;
+  border: 0px !important;
+}
+
+.note {
+  font-family: "Calibre Bold";
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.footer-title {
+  font-family: "Calibre Bold";
+  font-size: 24px;
+  color: #AF103F;
+  text-align: left;
+}
+
+.footer-subtitle {
+  font-family: "Calibre";
+  font-size: 21px;
+  color: #FFFFFF;
+  text-align: left;
+}
+
+.footer-link {
+  color: #CAE8E0 !important;
+  font-family: "Calibre Bold" !important;
+  font-size: 21px !important;
+  text-decoration: none;
+}
+
+.form-group {
+  display: inline-block;
+}
+
 h3 {
   margin: 40px 0 0;
 }
