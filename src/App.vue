@@ -49,11 +49,12 @@ export default {
 }
 
 .full-height {
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    padding: 0px, 150px, 0px, 140px !important;
 }
 </style>

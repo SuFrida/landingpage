@@ -1,16 +1,16 @@
 <template>
-  <div class="home container-fluid m-0 p-0 full-height">
+  <div class="home container-fluid full-height">
     <div class="navbar mt-0 d-flex">
       <img src="../assets/NAGASE.png" alt="red-logo" />
     </div>
     <!-- Landing -->
     <div class="row">
-      <div class="landing full-height">
-        <div class="col-lg-6 col-sm-12 d-inline-block title">
+      <div class="landing full-height container-fluid">
+        <div class="col-lg-6 col-md-12 d-inline-block">
           <h1 class="title">Acceleration Through Collaboration</h1>
         </div>
-        <div class="col-lg-6 col-sm-12 d-inline-block">
-          <h2 class="subtitle text-left">
+        <div class="col-lg-6 col-md-12 d-inline-block text-left">
+          <h2 class="subtitle">
             EMPOWER YOUR PEOPLE AND PROJECTS WITH NAGASE BUSINESS SERVICES
           </h2>
           <p class="text-epi">
@@ -18,24 +18,29 @@
             sales and marketing combined with a global network of over 100
             Nagase Group® companies, NAGASE Business Services brings light to
             your project lifecycle through accelerated access to a spectrum of
-            services: Materials Development, Production, Marketing, Regulatory,
-            and Deployment. Our goal is to be more than just your investor,
-            incubator, toll producer or marketer. We want to become your
-            collaborator.
+            services:  
           </p>
-          <div type="button" class="btn btn-primary click">CLICK TO LEARN MORE</div>
+          <p class="text-epi-bold">Materials Development, Production, Marketing, Regulatory,
+            and Deployment.</p>
+            <p class="text-epi">Our goal is to be more than just your investor,
+            incubator, toll producer or marketer.</p>
+            <p class="text-epi-bold"> We want to become your
+            collaborator.</p>
+          <div type="button" class="btn btn-primary click"><a href="#more" style="text-decoration: none; color: ">CLICK TO LEARN MORE</a></div>
         </div>
         
       </div>
     </div>
-
+  
     <!-- Cards -->
-    <div class="cards full-height container-fluid">
-      <div class="cards-title">
-        <h1 class="subtitle">
+    <div class="cards container-fluid full-height">
+      <div class="cards-title d-flex justify-content-center">
+        <div style="width: 920px" class="">
+          <h1 class="subtitle text-center align-self-center" id="more">
           NAGASE BUSINESS SERVICES OFFERS A SPECTRUM OF A-LA-CARTE OR 360
           SERVICES TO BRING YOUR PROJECTS TO THEIR FULL POTENTIAL
         </h1>
+        </div>
       </div>
       <div
         id="carouselExampleControls"
@@ -196,8 +201,9 @@
       </div>
     </div>
     <!-- Contact Form -->
-    <div class="contact-form full-height container-fluid">
-      <div class="row">
+    <div class="full-height container-fluid">
+      <div class="contact-form">
+      <div class="row align-items-center">
         <h1 class="title">Make Your Business Shine</h1>
         <div class="col-sm-12 col-md-6">
           <h1 class="subtitle2">WITH NBS IN YOUR CORNER, THE POSSIBILITIES ARE ENDLESS</h1>
@@ -209,14 +215,14 @@
             requirements, NBS can empower your organization with flexible
             solutions tailored to your specific needs.
           </p>
-          <p class="text-epi">
+          <p class="text-epi-bold">
             Please fill out the contact form and one of our experts will reach
             out to you soon.
           </p>
         </div>
         <div class="col-sm-12 col-md-6">
           <form>
-            <div class="form-row">
+            <div class="row">
                 <div class="col-md-6 col-sm-12 d-inline-block">
                   <input
                   type="text"
@@ -235,7 +241,7 @@
                 </div>
               
             </div>
-            <div class="form-row">
+            <div class="row">
               <div class="col-md-6 col-sm-12 d-inline-block">
                 <input
                 type="text"
@@ -253,7 +259,7 @@
               />
               </div>
             </div>
-            <div class="form-row">
+            <div class="row">
               <div class="col-md-6 col-sm-12 d-inline-block">
                 <input
                 type="text"
@@ -271,16 +277,16 @@
               />
               </div>
             </div>
-            <button type="submit" class="btn btn-primary click-submit">CLICK AND SUBMIT</button>
+            <button type="submit" class="btn btn-primary click-submit m-2">CLICK AND SUBMIT</button>
           </form>
           <h3 class="note">*Requiered Fields</h3>
         </div>
       </div>
     </div>
     <!-- Footer -->
-    <div class="footer full-height container-fluid">
+    <div class="footer container-fluid">
       <div class="row">
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-6 col-md-3">
           <h2 class="footer-title">NAGASE BUSINESS SERVICES</h2>
           <p class="footer-subtitle">©2022 Nagase Business Services</p>
           <p class="footer-subtitle">All Rights Reserved</p>
@@ -290,7 +296,7 @@
           <p class="text-epi">Itasca, IL 60143</p>
           <p class="text-epi">nbs@nagase-nam.com</p>
         </div>
-        <div class="col-sm-12 col-md-4">
+        <div class="col-sm-12 col-md-5">
           <ul>
             <li><a href="" class="footer-link">PRIVACY</a></li>
             <li><a href="" class="footer-link">COOKIE POLICY</a></li>
@@ -300,6 +306,8 @@
         </div>
       </div>
     </div>
+    </div>
+    
   </div>
 </template>
 
@@ -316,16 +324,16 @@ export default {
 <style>
 .title {
   font-family:'Epicene Text Bold';
-  font-size: 120px;
+  font-size: 100px;
   text-align: left;
   color: #FFFFFF;
-  padding-left: 20px;
 }
 
 .subtitle {
   font-family:'Calibre Bold';
-  font-size: 40px;
+  font-size: 30px;
   color: #A1A9D6;
+  text-align: left;
 }
 
 .subtitle2 {
@@ -342,7 +350,14 @@ export default {
   color: #FFFFFF;
 }
 
-.click {
+.text-epi-bold {
+  font-family:'Epicene Text Bold';
+  font-size: 20px;
+  text-align: left;
+  color: #FFFFFF;
+}
+
+.click, .click>a {
   color: #1A1818 !important;
   background-color: #C7CDEB !important;
   border-radius: 0px !important;
@@ -366,6 +381,28 @@ export default {
   font-family: "Calibre Bold";
   font-size: 20px;
   color: #FFFFFF;
+}
+
+.landing {
+  padding-right: 80px !important;
+  padding-left: 80px !important;
+}
+
+input {
+  background-color: #FFFFFF;
+  opacity: 80%;
+  color: #1A1818 !important;
+  border-radius: 0px !important;
+  border: #707070 1px;
+  margin: 10px !important;
+}
+
+.contact-form {
+  padding: 116px;
+}
+
+.footer {
+  padding: 140px !important;
 }
 
 .footer-title {
@@ -415,6 +452,7 @@ a {
   background-size: cover;
   background-position: right top;
   background-attachment: fixed;
+  margin: 0px, 140px, 0px, 140px !important;
 }
 
 .navbar img {
@@ -431,6 +469,10 @@ a {
 
 .card {
   border-radius: 0px !important;
+}
+
+.cards-title {
+  padding: 50px 75px 50px 75px !important;
 }
 
 .carousel-inner {
@@ -455,6 +497,10 @@ a {
 
 #deploy {
   background-color: #a1a9d6;
+}
+
+.footer {
+  padding: 140px, 140px, 100px, 140px !important;
 }
 
 @media only screen and (max-width: 768px) {
