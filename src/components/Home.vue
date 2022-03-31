@@ -41,8 +41,16 @@
     <!-- Cards Swiper -->
     <!-- <card-carousel/> -->
   
-    <!-- Carousel Example -->
-    <div class="container">
+     <!-- Cards -->
+    <div class="cards container-fluid full-height">
+      <div class="cards-title d-flex justify-content-center">
+        <div style="width: 920px" class="">
+          <h1 class="subtitle text-center align-self-center" id="more">
+          NAGASE BUSINESS SERVICES OFFERS A SPECTRUM OF A-LA-CARTE OR 360
+          SERVICES TO BRING YOUR PROJECTS TO THEIR FULL POTENTIAL
+        </h1>
+        </div>
+      </div>
     <div class="row mt-5 mb-5">
       <div class="col-sm-12">
       <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -53,48 +61,9 @@
         </div>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="https://therichpost.com/wp-content/uploads/2021/10/Vue-3-Bootstrap-5-Carousel-Slider-Working-Functionaliy-Example.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="https://therichpost.com/wp-content/uploads/2021/10/Vue-3-Bootstrap-5-Carousel-Slider-Working-Functionaliy-Example.png" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="https://therichpost.com/wp-content/uploads/2021/10/Vue-3-Bootstrap-5-Carousel-Slider-Working-Functionaliy-Example.png" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
-      </div>
-      </div>
-      </div>
-    <!-- Cards -->
-    <div class="cards container-fluid full-height">
-      <div class="cards-title d-flex justify-content-center">
-        <div style="width: 920px" class="">
-          <h1 class="subtitle text-center align-self-center" id="more">
-          NAGASE BUSINESS SERVICES OFFERS A SPECTRUM OF A-LA-CARTE OR 360
-          SERVICES TO BRING YOUR PROJECTS TO THEIR FULL POTENTIAL
-        </h1>
-        </div>
-      </div>
-      <div
-        id="cardCarousel"
-        class="carousel slide"
-        data-ride="carousel"
-      >
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12 col-md-4">
-                  <div class="card" style="width: 18rem" id="materials">
+            <div class="row">
+                <div class="col-md-4">
+              <div class="card" style="width: 500px" id="materials">
                     <div class="card-body">
                       <h5 class="card-title">Materials Development</h5>
                       <p class="card-text">
@@ -112,15 +81,9 @@
                       </ul>
                     </div>
                   </div>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12 col-md-4">
-                  <div class="card" id="production" style="width: 18rem">
+            <div class="col-md-4">
+                <div class="card" id="production" style="width: 500px">
                     <div class="card-body">
                       <h5 class="card-title">Production</h5>
                       <p class="card-text">
@@ -137,15 +100,9 @@
                       </ul>
                     </div>
                   </div>
-                </div>
-              </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12 col-md-4">
-                  <div class="card" id="marketing" style="width: 18rem">
+            <div class="col-md-4">
+              <div class="card" id="marketing" style="width: 500px">
                     <div class="card-body">
                       <h5 class="card-title">Marketing</h5>
                       <p class="card-text">
@@ -163,15 +120,13 @@
                       </ul>
                     </div>
                   </div>
-                </div>
-              </div>
+            </div>
             </div>
           </div>
           <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12 col-md-4">
-                  <div class="card" id="regulatory" style="width: 18rem">
+            <div class="row">
+              <div class="col-md-4">
+                  <div class="card" id="regulatory" style="width: 500px">
                     <div class="card-body">
                       <h5 class="card-title">Regulatory</h5>
                       <p class="card-text">
@@ -189,15 +144,9 @@
                       </ul>
                     </div>
                   </div>
-                </div>
               </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="container">
-              <div class="row">
-                <div class="col-sm-12 col-md-4">
-                  <div class="card" id="deploy" style="width: 18rem">
+              <div class="col-md-4">
+                <div class="card" id="deploy" style="width: 500px">
                     <div class="card-body">
                       <h5 class="card-title">Deployment</h5>
                       <p class="card-text">
@@ -217,31 +166,23 @@
                       </ul>
                     </div>
                   </div>
-                </div>
               </div>
             </div>
           </div>
         </div>
-        <a
-          class="carousel-control-prev"
-          href="#carouselExampleControls"
-          role="button"
-          data-slide="prev"
-        >
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a
-          class="carousel-control-next"
-          href="#carouselExampleControls"
-          role="button"
-          data-slide="next"
-        >
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
-    </div>
+      </div>
+      </div>
+      </div>
+   
     <!-- Contact Form -->
     <div class="full-height container-fluid">
       <div class="contact-form d-flex justify-content-center">
