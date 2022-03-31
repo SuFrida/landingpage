@@ -1,7 +1,10 @@
 <template>
   <div class="home container-fluid full-height">
-    <div class="navbar mt-0 d-flex">
-      <img src="../assets/NAGASE.png" alt="red-logo" />
+    <div class="navbar mt-0 row justify-content-between">
+      
+        <div class="col-6 d-flex justify-content-start"><img src="../assets/NAGASE.png" alt="red-logo" /></div>
+        <div class="col-6 d-flex justify-content-end"><p class="navbar-text">Make your Bussiness Shine</p></div>
+      
     </div>
     <!-- Landing -->
     <div class="row">
@@ -26,12 +29,51 @@
             incubator, toll producer or marketer.</p>
             <p class="text-epi-bold"> We want to become your
             collaborator.</p>
-          <div type="button" class="btn btn-primary click"><a href="#more" style="text-decoration: none; color: ">CLICK TO LEARN MORE</a></div>
+          
+        </div>
+        <div class="col-12 d-flex justify-content-center">
+            <div type="button" class="btn btn-primary click"><a href="#more" style="text-decoration: none; color: ">CLICK TO LEARN MORE</a></div>
         </div>
         
       </div>
     </div>
+
+    <!-- Cards Swiper -->
+    <!-- <card-carousel/> -->
   
+    <!-- Carousel Example -->
+    <div class="container">
+    <div class="row mt-5 mb-5">
+      <div class="col-sm-12">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://therichpost.com/wp-content/uploads/2021/10/Vue-3-Bootstrap-5-Carousel-Slider-Working-Functionaliy-Example.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://therichpost.com/wp-content/uploads/2021/10/Vue-3-Bootstrap-5-Carousel-Slider-Working-Functionaliy-Example.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://therichpost.com/wp-content/uploads/2021/10/Vue-3-Bootstrap-5-Carousel-Slider-Working-Functionaliy-Example.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      </div>
+      </div>
+      </div>
     <!-- Cards -->
     <div class="cards container-fluid full-height">
       <div class="cards-title d-flex justify-content-center">
@@ -43,7 +85,7 @@
         </div>
       </div>
       <div
-        id="carouselExampleControls"
+        id="cardCarousel"
         class="carousel slide"
         data-ride="carousel"
       >
@@ -202,7 +244,7 @@
     </div>
     <!-- Contact Form -->
     <div class="full-height container-fluid">
-      <div class="contact-form">
+      <div class="contact-form d-flex justify-content-center">
       <div class="row align-items-center">
         <h1 class="title">Make Your Business Shine</h1>
         <div class="col-sm-12 col-md-6">
@@ -277,9 +319,12 @@
               />
               </div>
             </div>
-            <button type="submit" class="btn btn-primary click-submit m-2">CLICK AND SUBMIT</button>
+            <div class="row">
+              <div class="col-sm-12 col-md-6 d-flex justify-content-center"><button type="submit" class="btn btn-primary click-submit m-2">CLICK AND SUBMIT</button></div>
+              <div class="col-sm-12 col-md-6"><h3 class="note m-3">*Requiered Fields</h3></div>
+            </div>
           </form>
-          <h3 class="note">*Requiered Fields</h3>
+          
         </div>
       </div>
     </div>
@@ -312,16 +357,29 @@
 </template>
 
 <script>
+//importing bootstrap 5
+import * as Bootstrap from 'bootstrap'
+
 export default {
   name: "Home",
-  props: {
-    msg: String,
-  },
+  mounted(){
+    var myCarousel = document.querySelector('#myCarousel')
+       new Bootstrap.Carousel(myCarousel)
+ }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
+
+/* Flickity Cards */
+
+
+.navbar-text {
+  color: #F2DDA1;
+  font-family: "Calibre Bold";
+  font-size: 22px;
+}
 .title {
   font-family:'Epicene Text Bold';
   font-size: 100px;
@@ -508,8 +566,69 @@ a {
     width: 100%;
   }
 
+  .navbar-text {
+    display: none;
+  }
+
   .navbar {
     align-items: center;
   }
+
+  .title {
+    font-size: 50px;
+    text-align: center;
+  }
+  .subtitle, .subtitle2 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .landing, .cards-title, .contact-form, .subtitle2, .footer {
+  padding-right: 20px !important;
+  padding-left: 20px !important;
+  padding-top: 0px;
+}
+
+.landing {
+  min-height: 80vh !important;
+  margin-top: 35px !important;
+}
+
+.contact-form {
+  min-height: 80vh !important;
+}
+
+.text-epi, .text-epi-bold {
+  text-align: center;
+  font-size: 15px;
+}
+
+.footer {
+  padding-top: 0px !important;
+  padding-bottom: 85px !important;
+}
+
+.footer-title, .footer-subtitle {
+  text-align: center;
+}
+
+  
+
+  /*.home {
+    text-align: center !important;
+  }*/
+}
+
+@media only screen and (max-width: 834px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+
+  .navbar {
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 1920px) {
+
 }
 </style>
