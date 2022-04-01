@@ -1,20 +1,25 @@
 <template>
   <div class="home container-fluid full-height">
-    <div class="navbar mt-0 row justify-content-between">
-      <div class="col-6 d-flex justify-content-start">
+    <div class="navbar mt-0 row">
+      <div class="container">
+        <div class="row w-100">
+          <div class="col-6 d-flex justify-content-start">
         <img src="../assets/NAGASE.png" alt="red-logo" />
       </div>
       <div class="col-6 d-flex justify-content-end">
         <p class="navbar-text">Make your Bussiness Shine</p>
       </div>
+        </div>
+      </div>
+      
     </div>
     <!-- Landing -->
     <div class="row">
-      <div class="landing full-height container-fluid">
-        <div class="col-lg-6 col-md-12 d-inline-block">
+      <div class="landing full-height container-fluid align-items-center">
+        <div class="col-lg-6 col-md-12 d-flex" id="title">
           <h1 class="title">Acceleration Through Collaboration</h1>
         </div>
-        <div class="col-lg-6 col-md-12 d-inline-block text-left">
+        <div class="col-lg-6 col-md-12 d-inline-block text-left" id="subtitle">
           <h2 class="subtitle">
             EMPOWER YOUR PEOPLE AND PROJECTS WITH NAGASE BUSINESS SERVICES
           </h2>
@@ -34,14 +39,16 @@
             producer or marketer.
           </p>
           <p class="text-epi-bold">We want to become your collaborator.</p>
-        </div>
-        <div class="col-12 d-flex justify-content-center">
+          <div class="col-12 d-flex justify-content-start">
           <div type="button" class="btn btn-primary click">
             <a href="#more" style="text-decoration: none; color: "
               >CLICK TO LEARN MORE</a
             >
           </div>
         </div>
+        </div>
+        
+        
       </div>
     </div>
 
@@ -104,9 +111,9 @@
                           delivering turnkey solutions.
                         </p>
                         <ul class="cards-options">
-                          <li>IDEA-TO-PRODUCT</li>
-                          <li>PRODUCT-MARKET FIT</li>
-                          <li>DE-RISKING</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> IDEA-TO-PRODUCT</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> PRODUCT-MARKET FIT</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> DE-RISKING</li>
                         </ul>
                       </div>
                     </div>
@@ -123,9 +130,9 @@
                           needs, be it at lab, pilot, or commercial scale.
                         </p>
                         <ul class="cards-options">
-                          <li>SCALE UP</li>
-                          <li>CUSTOM MANUFACTURING</li>
-                          <li>PROCESS OPTIMIZATION</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> SCALE UP</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> CUSTOM MANUFACTURING</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> PROCESS OPTIMIZATION</li>
                         </ul>
                       </div>
                     </div>
@@ -149,14 +156,14 @@
                           internationally.
                         </p>
                         <ul class="cards-options">
-                          <li>GO-TO MARKET IMPLEMENTATION</li>
-                          <li>MARKET IMPLEMENTATION</li>
-                          <li>LEAD GENERATION</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> GO-TO MARKET IMPLEMENTATION</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> MARKET IMPLEMENTATION</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> LEAD GENERATION</li>
                         </ul>
                       </div>
                     </div>
                   </div>
-                  <div class="col-md-5">
+                  <div class="col-md-5 col-sm-12">
                     <div class="card" id="regulatory" style="">
                       <div class="card-body">
                         <h5 class="card-title">Regulatory</h5>
@@ -170,8 +177,8 @@
                           verticals around the world.
                         </p>
                         <ul class="cards-options">
-                          <li>PRODUCT REGISTRATION</li>
-                          <li>IMPORT/EXPORT COMPLIANCE</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> PRODUCT REGISTRATION</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> IMPORT/EXPORT COMPLIANCE</li>
                         </ul>
                       </div>
                     </div>
@@ -181,7 +188,7 @@
               </div>
               <div class="carousel-item">
                 <div class="row justify-content-center">
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-sm-12">
                     <div class="card" id="deploy" style="">
                       <div class="card-body">
                         <h5 class="card-title">Deployment</h5>
@@ -195,10 +202,10 @@
                           and international logistics.
                         </p>
                         <ul class="cards-options">
-                          <li>DISTRIBUTION</li>
-                          <li>GLOBAL SALES REACH</li>
-                          <li>WAREHOUSING</li>
-                          <li>LOGISTICS</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> DISTRIBUTION</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> GLOBAL SALES REACH</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> WAREHOUSING</li>
+                          <li><i class="fa-solid fa-arrow-right"></i> LOGISTICS</li>
                         </ul>
                       </div>
                     </div>
@@ -259,7 +266,7 @@
             </p>
           </div>
           <div class="col-sm-12 col-md-6">
-            <form>
+            <form @submit.prevent="submit">
               <div class="row">
                 <div class="col-md-6 col-sm-12 d-inline-block">
                   <input
@@ -267,6 +274,8 @@
                     class="form-control"
                     id="inputName"
                     placeholder="Name*"
+                    v-model="name"
+                    name="Name"
                   />
                 </div>
                 <div class="col-md-6 col-sm-12 d-inline-block">
@@ -275,6 +284,8 @@
                     class="form-control"
                     id="inputCountry"
                     placeholder="Country*"
+                    v-model="country"
+                    name="Country"
                   />
                 </div>
               </div>
@@ -284,7 +295,9 @@
                     type="text"
                     class="form-control"
                     id="inputCompany"
-                    placeholder="Company"
+                    placeholder="Company*"
+                    v-model="company"
+                    name="Company"
                   />
                 </div>
                 <div class="col-md-6 col-sm-12 d-inline-block">
@@ -292,7 +305,9 @@
                     type="email"
                     class="form-control"
                     id="inputEmail"
-                    placeholder="Email Address"
+                    placeholder="Email Address*"
+                    v-model="email"
+                    name="Email"
                   />
                 </div>
               </div>
@@ -302,7 +317,9 @@
                     type="text"
                     class="form-control"
                     id="inputJob"
-                    placeholder="Job Title"
+                    placeholder="Job Title*"
+                    v-model="job"
+                    name="Job"
                   />
                 </div>
                 <div class="col-md-6 col-sm-12 d-inline-block">
@@ -311,11 +328,14 @@
                     class="form-control"
                     id="inputContact"
                     placeholder="Contact Number*"
+                    v-model="number"
+                    name="Number"
                   />
                 </div>
               </div>
+              
               <div class="row">
-                <div class="col-sm-12 col-md-6 d-flex justify-content-center">
+                <div class="col-sm-12 col-md-6 d-flex justify-content-start">
                   <button
                     type="submit"
                     class="btn btn-primary click-submit m-2"
@@ -327,6 +347,7 @@
                   <h3 class="note m-3">*Requiered Fields</h3>
                 </div>
               </div>
+              <div class="alert alert-danger" role="alert" v-if="submit">{{ this.error }}</div>
             </form>
           </div>
         </div>
@@ -334,22 +355,21 @@
       <!-- Footer -->
       <div class="footer container-fluid">
         <div class="row">
-          <div class="col-sm-6 col-md-3">
+          <div class="col-sm-6 col-md-4">
             <h2 class="footer-title">NAGASE BUSINESS SERVICES</h2>
             <p class="footer-subtitle">©2022 Nagase Business Services</p>
             <p class="footer-subtitle">All Rights Reserved</p>
           </div>
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-6 col-md-3">
             <p class="text-epi">450 E. Devon Avenue Suite 300</p>
             <p class="text-epi">Itasca, IL 60143</p>
             <p class="text-epi">nbs@nagase-nam.com</p>
           </div>
-          <div class="col-sm-12 col-md-5">
+          <div class="col-sm-12 col-md-5 d-flex align-items-center justify-content-end">
             <ul>
-              <li><a href="" class="footer-link">PRIVACY</a></li>
-              <li><a href="" class="footer-link">COOKIE POLICY</a></li>
-              <li><a href="#top" class="footer-link">BACK TO TOP </a></li>
-              <fa icon="fa-duotone fa-angles-up" />
+              <li class="footer-display"><a href="" class="footer-link">PRIVACY POLICY</a></li>
+              <li class="footer-display"><a href="" class="footer-link">COOKIE POLICY</a></li>
+              <li class="footer-display"><a href="#top" class="footer-link">BACK TO TOP <i class="fa-solid fa-arrow-up"></i> </a></li>
             </ul>
           </div>
         </div>
@@ -368,6 +388,36 @@ export default {
     var myCarousel = document.querySelector("#myCarousel");
     new Bootstrap.Carousel(myCarousel);
   },
+  name: "Contact",
+  data() {
+    return {
+                name : '',
+                email : '',
+                country: '',
+                job: '',
+                company: '',
+                number: '',
+                error: ''
+            }
+  },
+  methods : {
+            submit(e){
+                e.preventDefault()
+                
+                if(!this.name || !this.email || !this.country || !this.job || !this.company || !this.number){
+                    console.log('Required Fields not filled')
+                    this.error = '** Some required fields are missing'
+                    return
+                } else {
+                  console.log('Name: ', this.name)
+                  console.log('Email: ', this.email)
+                  console.log('Number: ', this.number)
+                  console.log('Job: ', this.job)
+                  console.log('Company: ', this.company)
+                  console.log('Country: ', this.country)
+                }
+            }
+        }
 };
 </script>
 
@@ -445,11 +495,11 @@ export default {
 .landing {
   padding-right: 80px !important;
   padding-left: 80px !important;
+  display: flex;
 }
 
 input {
-  background-color: #ffffff;
-  opacity: 80%;
+  background-color: rgba(255, 255, 255, 0.8);
   color: #1a1818 !important;
   border-radius: 0px !important;
   border: #707070 1px;
@@ -460,8 +510,17 @@ input {
   padding: 116px;
 }
 
+.alert-danger {
+  background: none !important;
+  border: none !important;
+  font-family: "Calibre Bold";
+  font-size: 22px;
+  color: #ffffff !important;
+  text-align: left;
+}
+
 .footer {
-  padding: 140px !important;
+  padding: 100px 90px 100px 120px !important;
 }
 
 .footer-title {
@@ -483,6 +542,11 @@ input {
   font-family: "Calibre Bold" !important;
   font-size: 21px !important;
   text-decoration: none;
+  
+}
+
+.footer-display {
+  display: inline-block;
 }
 
 .form-group {
@@ -524,16 +588,22 @@ a {
 .navbar {
   padding-left: 50px;
   padding-top: 0px !important;
+  position: fixed;
+  top: 0;
 }
 
 .card {
   border-radius: 0px !important;
-  padding: 75px;
+  padding: 75px !important;
   margin-right: 5px !important;
   margin-left: 5px !important;
   height: 600px;
   width: 600px;
   text-align: left;
+}
+
+.card-body {
+  padding: 0px;
 }
 
 .cards-title {
@@ -557,6 +627,22 @@ a {
   font-size: 22px;
   display: block;
   color: #1A1818;
+   margin: 0px !important;
+}
+
+ul {
+  padding-left: 0px !important;
+}
+
+.fa-arrow-right {
+  color: #FDF6E0;
+  margin: 8px;
+}
+
+.fa-arrow-up {
+  color: #CAE8E0;
+  font-size: 22px;
+  margin: 0px 8px;
 }
 
 .carousel-inner {
@@ -589,14 +675,17 @@ a {
   border-radius: 100% !important;
 }
 
+.carousel-indicators {
+  position: relative !important;
+   bottom: -650px !important;
+}
+
 .carousel-control-next, .carousel-control-prev {
     opacity: 0 !important;
     filter:alpha(opacity=0); /* IE support */
 }
 
-.footer {
-  padding: 140px, 140px, 100px, 140px !important;
-}
+
 
 @media only screen and (max-width: 768px) {
   [class*="col-"] {
@@ -611,6 +700,14 @@ a {
     align-items: center;
   }
 
+  #title {
+    display: block !important;
+  }
+
+  #subtitle {
+    display: block !important;
+  }
+
   .title {
     font-size: 50px;
     text-align: center;
@@ -620,6 +717,11 @@ a {
     font-size: 20px;
     text-align: center;
   }
+
+  .landing {
+    display: block !important;
+  }
+
   .landing,
   .cards-title,
   .contact-form,
@@ -653,6 +755,28 @@ a {
   .footer-title,
   .footer-subtitle {
     text-align: center;
+  }
+
+  .footer-display {
+    display: block !important;
+  }
+
+  .card {
+    height: 510px;
+  width: 280px;
+    padding: 70px 20px;
+  }
+
+  .card-title {
+    font-size: 30px;
+  }
+
+  .card-text {
+    font-size: 15px;
+  }
+
+  .cards-options {
+    font-size: 16px;
   }
 
   /*.home {
