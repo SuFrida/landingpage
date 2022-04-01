@@ -39,7 +39,7 @@
             producer or marketer.
           </p>
           <p class="text-epi-bold">We want to become your collaborator.</p>
-          <div class="col-12 d-flex justify-content-start">
+          <div class="col-12 d-flex" id="learn">
           <div type="button" class="btn btn-primary click">
             <a href="#more" style="text-decoration: none; color: "
               >CLICK TO LEARN MORE</a
@@ -65,12 +65,13 @@
           </h1>
         </div>
       </div>
-      <div class="row mt-5 mb-5">
+      <div class="row mb-5">
         <div class="col-sm-12">
           <div
             id="carouselExampleIndicators"
             class="carousel slide"
             data-bs-ride="carousel"
+            data-interval="false"
           >
             <div class="carousel-indicators">
               <button
@@ -93,14 +94,25 @@
                 data-bs-slide-to="2"
                 aria-label="Slide 3"
               ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="3"
+                aria-label="Slide 4"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide-to="4"
+                aria-label="Slide 5"
+              ></button>
             </div>
-            <div class="carousel-inner">
+            <div class="carousel-inner m-auto">
               <div class="carousel-item active">
-                <div class="row justify-content-center
-                " style="flex-wrap:none;">
-                  <div class="col-md-5">
-                    <div class="card" style="" id="materials">
-                      <div class="card-body">
+                <div class="row justify-content-center">
+                  <div class="col-md-6">
+                    <div class="card m-0" style="" id="materials">
+                      <div class="card-body m-0">
                         <h5 class="card-title">Materials Development</h5>
                         <p class="card-text">
                           Nagase’s team of material science experts can develop
@@ -118,8 +130,14 @@
                       </div>
                     </div>
                   </div>
+                  
+                  
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center">
                   <div class="col-md-5">
-                    <div class="card" id="production" style="">
+                    <div class="card m-0" id="production" style="">
                       <div class="card-body">
                         <h5 class="card-title">Production</h5>
                         <p class="card-text">
@@ -137,13 +155,12 @@
                       </div>
                     </div>
                   </div>
-                  
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="row justify-content-center">
                   <div class="col-md-5">
-                    <div class="card" id="marketing" style="">
+                    <div class="card m-0" id="marketing" style="">
                       <div class="card-body">
                         <h5 class="card-title">Marketing</h5>
                         <p class="card-text">
@@ -163,8 +180,14 @@
                       </div>
                     </div>
                   </div>
+                  
+                  
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="row justify-content-center">
                   <div class="col-md-5 col-sm-12">
-                    <div class="card" id="regulatory" style="">
+                    <div class="card m-0" id="regulatory" style="">
                       <div class="card-body">
                         <h5 class="card-title">Regulatory</h5>
                         <p class="card-text">
@@ -183,13 +206,12 @@
                       </div>
                     </div>
                   </div>
-                  
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="row justify-content-center">
                     <div class="col-md-5 col-sm-12">
-                    <div class="card" id="deploy" style="">
+                    <div class="card m-0" id="deploy" style="">
                       <div class="card-body">
                         <h5 class="card-title">Deployment</h5>
                         <p class="card-text">
@@ -335,10 +357,11 @@
               </div>
               
               <div class="row">
-                <div class="col-sm-12 col-md-6 d-flex justify-content-start">
+                <div class="col-sm-12 col-md-6 d-flex" id="submitbtn">
                   <button
                     type="submit"
                     class="btn btn-primary click-submit m-2"
+                    
                   >
                     CLICK AND SUBMIT
                   </button>
@@ -355,21 +378,21 @@
       <!-- Footer -->
       <div class="footer container-fluid">
         <div class="row">
-          <div class="col-sm-6 col-md-4">
+          <div class="col-sm-12 col-md-4">
             <h2 class="footer-title">NAGASE BUSINESS SERVICES</h2>
             <p class="footer-subtitle">©2022 Nagase Business Services</p>
             <p class="footer-subtitle">All Rights Reserved</p>
           </div>
-          <div class="col-sm-6 col-md-3">
+          <div class="col-sm-12 col-md-3 mt-sm-5">
             <p class="text-epi">450 E. Devon Avenue Suite 300</p>
             <p class="text-epi">Itasca, IL 60143</p>
             <p class="text-epi">nbs@nagase-nam.com</p>
           </div>
-          <div class="col-sm-12 col-md-5 d-flex align-items-center justify-content-end">
+          <div class="col-sm-12 col-md-5 d-flex align-items-center mt-sm-5" id="policy">
             <ul>
               <li class="footer-display"><a href="" class="footer-link">PRIVACY POLICY</a></li>
               <li class="footer-display"><a href="" class="footer-link">COOKIE POLICY</a></li>
-              <li class="footer-display"><a href="#top" class="footer-link">BACK TO TOP <i class="fa-solid fa-arrow-up"></i> </a></li>
+              <li class="footer-display mt-sm-5"><a href="#top" class="footer-link">BACK TO TOP <i class="fa-solid fa-arrow-up"></i> </a></li>
             </ul>
           </div>
         </div>
@@ -476,6 +499,10 @@ export default {
   border: 0px !important;
 }
 
+#learn {
+  justify-content: start;
+}
+
 .click-submit {
   color: #1a1818 !important;
   background-color: #f2d0c7 !important;
@@ -484,6 +511,10 @@ export default {
   font-size: 22px;
   float: left;
   border: 0px !important;
+}
+
+#submitbtn {
+  justify-content: start;
 }
 
 .note {
@@ -553,6 +584,10 @@ input {
   display: inline-block;
 }
 
+#policy {
+  justify-content: end;
+}
+
 h3 {
   margin: 40px 0 0;
 }
@@ -595,15 +630,13 @@ a {
 .card {
   border-radius: 0px !important;
   padding: 75px !important;
-  margin-right: 5px !important;
-  margin-left: 5px !important;
   height: 600px;
   width: 600px;
   text-align: left;
 }
 
 .card-body {
-  padding: 0px;
+  padding: 0px !important;
 }
 
 .cards-title {
@@ -646,7 +679,8 @@ ul {
 }
 
 .carousel-inner {
-  align-content: center !important;
+  justify-content: center !important;
+  align-content: center;
 }
 
 #materials {
@@ -678,11 +712,6 @@ ul {
 .carousel-indicators {
   position: relative !important;
    bottom: -650px !important;
-}
-
-.carousel-control-next, .carousel-control-prev {
-    opacity: 0 !important;
-    filter:alpha(opacity=0); /* IE support */
 }
 
 
@@ -722,6 +751,14 @@ ul {
     display: block !important;
   }
 
+  #learn {
+  justify-content: center;
+}
+
+#submitbtn {
+  justify-content: center;
+}
+
   .landing,
   .cards-title,
   .contact-form,
@@ -733,7 +770,7 @@ ul {
   }
 
   .landing {
-    min-height: 80vh !important;
+    min-height: 40vh !important;
     margin-top: 35px !important;
   }
 
@@ -746,6 +783,10 @@ ul {
     text-align: center;
     font-size: 15px;
   }
+
+  .contact-form {
+  margin-top: 170px;
+}
 
   .footer {
     padding-top: 0px !important;
@@ -761,23 +802,40 @@ ul {
     display: block !important;
   }
 
+  #policy {
+  justify-content: center;
+}
+
   .card {
-    height: 510px;
-  width: 280px;
-    padding: 70px 20px;
+    height: 510px !important;
+    width: 280px !important;
+    padding: 40px 15px !important;
   }
 
   .card-title {
-    font-size: 30px;
+    font-size: 30px !important;
   }
 
   .card-text {
-    font-size: 15px;
+    font-size: 15px !important;
   }
 
   .cards-options {
-    font-size: 16px;
+    font-size: 16px !important;
   }
+
+  .cards-title {
+  padding: 175px 20px 20px 20px !important;
+}
+
+  .carousel-control-next, .carousel-control-prev {
+    opacity: 0 !important;
+    filter:alpha(opacity=0); /* IE support */
+}
+
+.carousel-indicators {
+   bottom: -565px !important;
+}
 
   /*.home {
     text-align: center !important;
