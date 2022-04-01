@@ -1,18 +1,19 @@
 <template>
   <div class="home container-fluid full-height">
-    <div class="navbar mt-0 row">
+    <div class="navbar fixed-top mt-0 row" id="nav">
       <div class="container">
-        <div class="row w-100">
-          <div class="col-6 d-flex justify-content-start">
+        <div class="row w-100" id="logo">
+          <div class="col-6 d-flex mr-0">
         <img src="../assets/NAGASE.png" alt="red-logo" />
       </div>
-      <div class="col-6 d-flex justify-content-end">
-        <p class="navbar-text">Make your Bussiness Shine</p>
-      </div>
+      
         </div>
       </div>
       
     </div>
+    <div class="col-6 d-flex justify-content-end" id="top-text">
+        <p class="navbar-text">Make your Bussiness Shine</p>
+      </div>
     <!-- Landing -->
     <div class="row">
       <div class="landing full-height container-fluid align-items-center">
@@ -439,6 +440,19 @@ export default {
                   console.log('Company: ', this.company)
                   console.log('Country: ', this.country)
                 }
+            },
+            scrollDown() {
+              var myNav = document.getElementById("nav");
+
+window.onscroll = function () {
+    "use strict";
+    if (document.body.scrollTop >= 280) {
+        myNav.classList.add("scroll");
+        myNav.blur(0.8);
+    } else {
+        myNav.classList.remove("scroll");
+    }
+};
             }
         }
 };
@@ -446,7 +460,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-/* Flickity Cards */
+.scroll {
+  background: #707070;
+}
 
 .navbar-text {
   color: #f2dda1;
@@ -458,6 +474,12 @@ export default {
   font-size: 100px;
   text-align: left;
   color: #ffffff;
+}
+
+#top-text {
+  position: absolute;
+  top: 30px;
+  right: 100px;
 }
 
 .subtitle {
@@ -626,6 +648,9 @@ a {
   position: fixed;
   top: 0;
 }
+#logo {
+    justify-content: start !important;
+  }
 
 .card {
   border-radius: 0px !important;
@@ -721,16 +746,23 @@ ul {
     width: 100%;
   }
 
+  #logo {
+    justify-content: center !important;
+  }
+
   .navbar-text {
     display: none;
   }
 
   .navbar {
     align-items: center;
+    justify-content: center;
   }
 
   #title {
     display: block !important;
+    margin-top: 65px;
+    justify-content: center !important;
   }
 
   #subtitle {
