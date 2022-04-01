@@ -71,7 +71,7 @@
             id="carouselExampleIndicators"
             class="carousel slide"
             data-bs-ride="carousel"
-            data-interval="false"
+            data-bs-interval="false"
           >
             <div class="carousel-indicators">
               <button
